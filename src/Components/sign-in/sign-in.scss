@@ -2,8 +2,16 @@
     width: 380px;
     display: flex;
     flex-direction: column;
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
   
     h2,span {
         margin: 10px 0;
       }
+    
+    
   }
+
