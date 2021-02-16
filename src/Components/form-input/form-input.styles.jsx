@@ -4,8 +4,8 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 const shrinkLabelStyles = css`
-    top: -14px;
-    font-size: 12px;
+    top: -20px;
+    font-size: 14px;
     color: ${mainColor};
 `;
 
@@ -20,14 +20,14 @@ export const GroupContainer = styled.div`
 
 export const FormInputContainer = styled.input`
 background: none;
-background-color: white;
+background-color: #f2f2f2;
 color: $sub-color;
 font-size: 18px;
 padding: 10px 10px 10px 5px;
 display: block;
 width: 100%;
 border: none;
-border-radius: 0;
+border-radius: 10px;
 border-bottom: 1px solid $sub-color;
 margin: 25px 0;
 
