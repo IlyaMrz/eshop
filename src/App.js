@@ -19,7 +19,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    const {setCurrentUser} = this.props;
+    const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -39,7 +39,8 @@ class App extends React.Component {
           // console.log(this.state)
         });
       }
-      setCurrentUser(userAuth)
+      setCurrentUser(userAuth);
+      // addCollectionAndDocuments('collections', collectionArray.map(({title, items}) => ({title, items})));
     })
   }
 
@@ -69,6 +70,7 @@ class App extends React.Component {
 // })
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
+  // collectionArray: selectCollectionsForPreview
 })
 
 const mapDispatchToProps = dispatch => ({
