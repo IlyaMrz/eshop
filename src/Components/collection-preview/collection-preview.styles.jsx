@@ -11,6 +11,13 @@ export const PreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-font-size: 28px;
-margin-bottom: 25px;
+    width: 40%;
+    font-size: 28px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 `;
