@@ -13,6 +13,7 @@ export const MenuItemContainer = styled.div`
 	overflow: hidden;
 
 	&:hover {
+    box-shadow: 0 0 3pt 1pt black;
 		cursor: pointer;
 
 		& .background-image {

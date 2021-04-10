@@ -9,6 +9,10 @@ export const CartIconContainer = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border-radius: 7px;
+    &:hover {
+        box-shadow: 0 0 3pt 1pt black;
+    }
 `;
 
 export const ItemCountContainer = styled.span`

@@ -16,6 +16,8 @@ export const ItemContainer = styled.div`
     height: 350px;
     align-items: center;
     position: relative;
+    margin-bottom: 15px;
+
     
     &:hover {
       .image {
@@ -24,6 +26,11 @@ export const ItemContainer = styled.div`
       button {
         opacity: 0.85;
         display: flex;
+        z-index:2;
+      }
+      div:first-child {
+          box-shadow: 0 0 3pt 1pt black;
+          z-index:1;
       }
     }
 `;
@@ -43,11 +50,11 @@ export const CollectionFooterContainer = styled.div`
       display: flex;
       justify-content: space-between;
       font-size: 18px;
+      padding: 0 15px;
 `;
 
 export const NameContainer = styled.span`
     width: 90%;
-    margin-bottom: 15px;
 `;
 
 export const PriceContainer = styled.span`

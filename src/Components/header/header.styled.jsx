@@ -27,4 +27,8 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
+    border-radius: 7px;
+    &:hover {
+        box-shadow: 0 0 3pt 1pt black;
+    }
 `;
