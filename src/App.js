@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import HomePage from './Pages/homepage';
 import { Route, Switch, Redirect } from 'react-router-dom';
@@ -11,17 +11,20 @@ import {connect} from 'react-redux';
 // import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
-import { chechUserSession } from './redux/user/user.actions'
+import { checkUserSession } from './redux/user/user.actions';
 
 
+// class App extends React.Component {
+const App = ({ checkUserSession1, currentUser }) => {
+  // unsubscribeFromAuth = null
 
-class App extends React.Component {
-
-  unsubscribeFromAuth = null
-
-  componentDidMount() {
-    const { chechUserSession1 } = this.props;
-    chechUserSession1();
+  useEffect(()=>{
+    console.log('effect app')
+    checkUserSession1();
+  },[checkUserSession1])
+  // componentDidMount() {
+  //   const { chechUserSession1 } = this.props;
+  //   chechUserSession1();
 
     // const { setCurrentUser } = this.props;
 
@@ -42,13 +45,13 @@ class App extends React.Component {
     //   setCurrentUser(userAuth);
     //   // addCollectionAndDocuments('collections', collectionArray.map(({title, items}) => ({title, items})));
     // })
-  }
+  // }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
+  // componentWillUnmount() {
+  //   this.unsubscribeFromAuth();
+  // }
 
-  render() {
+  // render() {
 
     return (
       <div>
@@ -57,11 +60,11 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route excat path='/checkout' component={CheckoutPage} />
-          <Route exact path='/signin' render={()=>this.props.currentUser ? <Redirect to='/'/> : <SignInUp /> } />
+          <Route exact path='/signin' render={()=>currentUser ? <Redirect to='/'/> : <SignInUp /> } />
         </Switch>
       </div>
     );
-  }
+  // }
   
 }
 
@@ -78,7 +81,7 @@ const mapStateToProps = createStructuredSelector({
 // })
 
 const mapDispatchToProps = dispatch => ({
-  chechUserSession1: () => dispatch(chechUserSession())
+  checkUserSession1: () => dispatch(checkUserSession())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
