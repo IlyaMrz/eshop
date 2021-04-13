@@ -6,7 +6,7 @@ import { CollectionPreviewContainer, PreviewContainer, TitleContainer } from './
 const CollectionPreview = ({title, items, history, match, routeName}) => (
     <CollectionPreviewContainer>
         <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
-            {title.toUpperCase()}
+            {title.toUpperCase()+" ➥"}
         </TitleContainer>
         <PreviewContainer>
             {items
