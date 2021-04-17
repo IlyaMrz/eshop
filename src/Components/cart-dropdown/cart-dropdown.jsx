@@ -3,18 +3,17 @@ import CartItem from '../cart-item/cart-item';
 import { CartDowndropContainer, CartItemsContainer, 
     EmptyMessageContainer, CartDropdownButton } from './cart-dropdown.styles';
 import { connect } from 'react-redux';
-import { selectCartHidden, selectCartItems } from '../../redux/cart/cart.selectors';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
-import { toggleCartHidden } from '../../redux/cart/cart.actions'
+import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import useOutsideClick from '../custom-hooks/useOutsideClick';
 
-const CartDowndrop = ({cartItems, history, hidden, toggleCartHidden}) => {
+const CartDowndrop = ({cartItems, history, dispatch, hidden}) =>{ 
     const ref = useRef();
     useOutsideClick(ref, () => {
-        console.log('asdf')
-      !hidden && toggleCartHidden()
-    });
+        !hidden && dispatch(toggleCartHidden())
+    })
     return (
         <CartDowndropContainer ref={ref}>
             <CartItemsContainer>
@@ -26,19 +25,18 @@ const CartDowndrop = ({cartItems, history, hidden, toggleCartHidden}) => {
             </CartItemsContainer>
             <CartDropdownButton onClick={()=>{
                 history.push('/checkout'); 
-                toggleCartHidden()
+                dispatch(toggleCartHidden())
                 }}>
                     GO TO CHECKOUT</CartDropdownButton>
         </CartDowndropContainer>
 )}
 
 const mapStateToProps = createStructuredSelector({
-    cartItems: selectCartItems,
-    hidden: selectCartHidden
+    cartItems: selectCartItems
 })
 
-const mapDispatchToProps = dispatch => ({
-    toggleCartHidden: ()=>dispatch(toggleCartHidden())
-})
+// const mapDispatchToProps = dispatch => ({
+//     toggleCartHidden: ()=>dispatch(toggleCartHidden())
+// })
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CartDowndrop));
+export default withRouter(connect(mapStateToProps)(CartDowndrop));
