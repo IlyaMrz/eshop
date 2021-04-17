@@ -7,7 +7,7 @@ export const CartDropdownButton = styled(CustomButton)`
 
 export const CartDowndropContainer = styled.div`
     position: absolute;
-    width: 270px;
+    width: 240px;
     height: 340px;
     display: flex;
     flex-direction: column;
