@@ -11,6 +11,10 @@ export const MenuItemContainer = styled.div`
 	border: 1px solid black;
 	margin: 0 7.5px 15px;
 	overflow: hidden;
+  @media screen and (max-width: 730px) {
+    max-height: calc(100vw * 0.4);
+
+  }
 
 	&:hover {
     box-shadow: 0 0 3pt 1pt black;

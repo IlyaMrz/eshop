@@ -7,6 +7,15 @@ export const CustomButtonContainer = styled(CustomButton)`
     position: absolute;
     top: 255px;
     display: none;
+    @media screen and (max-width: 730px) {
+      min-width: 10px;
+      width: auto;
+      height: auto;
+      letter-spacing: 0.5px;
+      line-height: 30px;
+      padding: 0 0.8rem 0 0.8rem;
+      font-size: 0.8rem;
+    }
 `
 
 export const ItemContainer = styled.div`
@@ -17,7 +26,6 @@ export const ItemContainer = styled.div`
     align-items: center;
     position: relative;
     margin-bottom: 15px;
-
     
     &:hover {
       .image {
@@ -51,6 +59,9 @@ export const CollectionFooterContainer = styled.div`
       justify-content: space-between;
       font-size: 18px;
       padding: 0 15px;
+      @media screen and (max-width: 550px) {
+        font-size: 13px;
+      }
 `;
 
 export const NameContainer = styled.span`

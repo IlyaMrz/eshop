@@ -11,3 +11,8 @@ a {
 *, *::after, *::before {
   box-sizing: border-box;
 }
+@media screen and (max-width: 730px) {
+  body {
+    padding: 0px 2px ;
+  }
+}
