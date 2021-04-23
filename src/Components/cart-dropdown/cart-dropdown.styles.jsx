@@ -19,7 +19,7 @@ export const CartDowndropContainer = styled.div`
     top: 90px;
     right: 40px;
     z-index: 5;
-    @media screen and (max-width: 730px ) {
+    @media screen and (max-width: 400px ) {
         width: 70vw;
         max-height: 70vh;
         padding: 5px 0 5px 0;
