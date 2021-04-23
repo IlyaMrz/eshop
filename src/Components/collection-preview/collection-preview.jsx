@@ -13,22 +13,19 @@ const CollectionPreview = ({title, items, history, match, routeName}) =>{
          
         return () => window.removeEventListener("resize", handleWindowResize);
        },[]);
+    let itemsInRow
 return (
     <CollectionPreviewContainer>
         <TitleContainer onClick={() => history.push(`${match.path}/${routeName}`)}>
             {title.toUpperCase()+" ➥"}
         </TitleContainer>
         <PreviewContainer>
-            { width > breakPoint ? items
-            .filter((item, idx) => idx < 4)
+            { (width > breakPoint ? itemsInRow = 4 : itemsInRow = 2) &&
+            items
+            .filter((item, idx) => idx < itemsInRow)
             .map((item) => (
                 <CollectionItem key={item.id} item={item}/>
-             )) : items
-             .filter((item, idx) => idx < 2)
-             .map((item) => (
-                 <CollectionItem key={item.id} item={item}/>
-              ))
-            }
+             ))}
         </PreviewContainer>
     </CollectionPreviewContainer>
 )}
