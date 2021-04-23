@@ -3,11 +3,20 @@ import styled from 'styled-components';
 export const CollectionPreviewContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 0 auto 20px;
+
+    @media screen and (max-width: 730px) {
+        align-items: center;
+    }
 `
 export const PreviewContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 730px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 `;
 
 export const TitleContainer = styled.h1`

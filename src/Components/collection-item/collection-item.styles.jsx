@@ -7,9 +7,10 @@ export const CustomButtonContainer = styled(CustomButton)`
     position: absolute;
     top: 255px;
     display: none;
-    @media screen and (max-width: 730px) {
-      min-width: 10px;
-      width: auto;
+    @media screen and (max-width: 820px) {
+      display: block;
+      min-width: 85px;
+      width: 20vw;
       height: auto;
       letter-spacing: 0.5px;
       line-height: 30px;
@@ -19,13 +20,13 @@ export const CustomButtonContainer = styled(CustomButton)`
 `
 
 export const ItemContainer = styled.div`
-    width: 22vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     height: 350px;
     align-items: center;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     
     &:hover {
       .image {
@@ -39,6 +40,20 @@ export const ItemContainer = styled.div`
       div:first-child {
           box-shadow: 0 0 3pt 1pt black;
           z-index:1;
+      }
+    }
+    @media screen and (max-width: 730px) {
+      width: 40vw;
+      margin-bottom: 29px;
+      &:hover {
+        .image {
+          opacity: 0.8;
+        }
+        button {
+          opacity: 0.85;
+          display: flex;
+          z-index:2;
+        }
       }
     }
 `;
@@ -60,7 +75,7 @@ export const CollectionFooterContainer = styled.div`
       font-size: 18px;
       padding: 0 15px;
       @media screen and (max-width: 550px) {
-        font-size: 13px;
+        font-size: 16px;
       }
 `;
 

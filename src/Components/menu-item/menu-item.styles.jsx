@@ -13,7 +13,7 @@ export const MenuItemContainer = styled.div`
 	overflow: hidden;
   @media screen and (max-width: 730px) {
     max-height: calc(100vw * 0.4);
-
+    // height: 180px;
   }
 
 	&:hover {
@@ -34,9 +34,6 @@ export const MenuItemContainer = styled.div`
     margin-right: 7.5px;
   }
 
-  &:last-child {
-    margin-left: 7.5px;
-  }
 `;
 
 export const BackgroundImageContainer = styled.div`
