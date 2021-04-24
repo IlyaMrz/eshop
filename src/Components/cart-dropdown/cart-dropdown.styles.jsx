@@ -20,9 +20,7 @@ export const CartDowndropContainer = styled.div`
     right: 40px;
     z-index: 5;
     @media screen and (max-width: 400px ) {
-        width: 70vw;
         max-height: 70vh;
-        padding: 5px 0 5px 0;
     }
 `;
 
@@ -33,9 +31,7 @@ export const CartItemsContainer = styled.div`
     overflow: scroll;
     overflow-x: hidden; 
     margin-bottom: 10px;
-    @media screen and (max-width: 730px ) {
-        width: 80%;
-    }
+
 `;
 
 export const EmptyMessageContainer = styled.span`
