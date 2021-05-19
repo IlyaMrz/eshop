@@ -40,6 +40,7 @@ margin: 25px 0;
   }
 }
 `; 
+FormInputContainer.displayName = 'FormInputContainer';
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
@@ -54,3 +55,4 @@ export const FormInputLabel = styled.label`
     ${shrinkLabelStyles}
   }
 `;
+FormInputLabel.displayName = 'FormInputLabel';

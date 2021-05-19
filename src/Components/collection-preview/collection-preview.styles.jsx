@@ -33,3 +33,4 @@ export const TitleContainer = styled.h1`
         box-shadow: 0 0 3pt 1pt black;
     }
 `;
+TitleContainer.displayName = 'TitleContainer';

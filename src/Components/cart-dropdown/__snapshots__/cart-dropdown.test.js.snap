@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDowndrop component should render CartDowndrop component 1`] = `
+<styled.div>
+  <styled.div>
+    <CartItem
+      item={
+        Object {
+          "id": 1,
+        }
+      }
+      key="1"
+    />
+    <CartItem
+      item={
+        Object {
+          "id": 2,
+        }
+      }
+      key="2"
+    />
+    <CartItem
+      item={
+        Object {
+          "id": 3,
+        }
+      }
+      key="3"
+    />
+  </styled.div>
+  <CartDropdownButton
+    onClick={[Function]}
+  >
+    GO TO CHECKOUT
+  </CartDropdownButton>
+</styled.div>
+`;
+
+exports[`CartDowndrop component should render EmptyMessageContainer if cartItems is empty 1`] = `
+<styled.div>
+  <styled.div>
+    <EmptyMessageContainer>
+      Your cart is empty
+    </EmptyMessageContainer>
+  </styled.div>
+  <CartDropdownButton
+    onClick={[Function]}
+  >
+    GO TO CHECKOUT
+  </CartDropdownButton>
+</styled.div>
+`;

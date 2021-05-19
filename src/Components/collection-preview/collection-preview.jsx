@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import CollectionItem from '../collection-item/collection-item';
 import { CollectionPreviewContainer, PreviewContainer, TitleContainer } from './collection-preview.styles';
 
-const CollectionPreview = ({title, items, history, match, routeName}) =>{
+export const CollectionPreview = ({title, items, history, match, routeName}) =>{
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakPoint = 730;
     React.useEffect(() => {

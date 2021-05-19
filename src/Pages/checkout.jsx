@@ -9,7 +9,7 @@ import CheckoutItem from '../Components/checkout-item/checkout-item';
 import StripeCheckoutButton from '../Components/stripe-button/stripe-button';
 
 
-const CheckoutPage = ({cartItems, total}) => (
+export const CheckoutPage = ({cartItems, total}) => (
     <CheckoutPageContainer>
         <CheackoutHeaderContainer>
             <HeaderBlockContainer>

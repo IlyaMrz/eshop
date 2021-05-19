@@ -4,15 +4,15 @@ import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/fireb
 import { fetchCollectionsSuccess, fetchCollectionsFailure }from './shop.actions';
 
 export function* fetchCollectionsAsync() {
-    yield console.log('gen gen async');
     
     try {
+        yield console.log('gen gen async');
         const collectionRef = firestore.collection('collections');
         const snapshot = yield collectionRef.get();
         const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot);
         yield put(fetchCollectionsSuccess(collectionsMap));
     } catch (error) {
-        yield put(fetchCollectionsFailure(error))
+        yield put(fetchCollectionsFailure(error.message))
     }
     
 }

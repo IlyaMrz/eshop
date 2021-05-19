@@ -6,7 +6,7 @@ import { ItemContainer, CustomButtonContainer,
     ImageContainer, CollectionFooterContainer,
     NameContainer, PriceContainer } from './collection-item.styles'; 
 
-const CollectionItem = ({ item, addItem}) => {
+export const CollectionItem = ({ item, addItem}) => {
     const { name, price, imageUrl } = item;
     return (
     <ItemContainer>

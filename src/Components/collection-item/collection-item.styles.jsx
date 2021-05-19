@@ -19,6 +19,8 @@ export const CustomButtonContainer = styled(CustomButton)`
     }
 `
 
+CustomButtonContainer.displayName = 'CustomButtonContainer';
+
 export const ItemContainer = styled.div`
     width: 20vw;
     display: flex;
@@ -66,6 +68,7 @@ export const ImageContainer = styled.div`
   margin-bottom: 5px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
+ImageContainer.displayName = 'ImageContainer';
 
 export const CollectionFooterContainer = styled.div`
       width: 100%;
@@ -78,11 +81,14 @@ export const CollectionFooterContainer = styled.div`
         font-size: 16px;
       }
 `;
+CollectionFooterContainer.displayName = 'CollectionFooterContainer';
 
 export const NameContainer = styled.span`
     width: 90%;
 `;
+NameContainer.displayName = 'NameContainer';
 
 export const PriceContainer = styled.span`
     width: 10%;
 `;
+PriceContainer.displayName = 'PriceContainer';

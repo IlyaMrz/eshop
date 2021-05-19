@@ -9,7 +9,7 @@ import { withRouter } from 'react-router-dom';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import useOutsideClick from '../custom-hooks/useOutsideClick';
 
-const CartDowndrop = ({cartItems, history, dispatch, hidden}) =>{ 
+export const CartDowndrop = ({cartItems, history, dispatch, hidden}) =>{ 
     const ref = useRef();
     useOutsideClick(ref, () => {
         !hidden && dispatch(toggleCartHidden())

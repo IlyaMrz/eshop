@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render Header component 1`] = `
+<styled.div>
+  <Styled(Link)
+    to="/"
+  >
+    <ForwardRef(SvgCrown)
+      className="logo"
+    />
+  </Styled(Link)>
+  <styled.div>
+    <OptionLink
+      to="/"
+    >
+      HOME
+    </OptionLink>
+    <OptionLink
+      to="/shop"
+    >
+      SHOP
+    </OptionLink>
+    <OptionLink
+      to="/contact"
+    >
+      CONTACT
+    </OptionLink>
+    <OptionLink
+      as="div"
+      onClick={[MockFunction]}
+    >
+      SIGN OUT
+    </OptionLink>
+    <Connect(CartIcon) />
+  </styled.div>
+</styled.div>
+`;
